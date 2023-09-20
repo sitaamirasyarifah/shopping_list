@@ -1,3 +1,6 @@
+from main.views import logout_user
+from main.views import login_user #sesuaikan dengan nama fungsi yang dibuat
+from main.views import register #sesuaikan dengan nama fungsi yang dibuat
 from django.urls import path
 from main.views import show_main
 from main.views import show_main, create_product
@@ -14,4 +17,7 @@ urlpatterns = [
     path('json/', show_json, name='show_json'), 
     path('xml/<int:id>/', show_xml_by_id, name='show_xml_by_id'),
     path('json/<int:id>/', show_json_by_id, name='show_json_by_id'), 
+    path('register/', register, name='register'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
 ]
